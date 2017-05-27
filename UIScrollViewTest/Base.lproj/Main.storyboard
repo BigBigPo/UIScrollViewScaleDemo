@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ig-fb-CZW">
+                                <rect key="frame" x="0.0" y="154" width="375" height="359"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hcf-tL-CZj">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="375" id="e4c-mU-p8e"/>
+                                            <constraint firstAttribute="height" constant="375" id="tum-HG-uBL"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hcf-tL-CZj" firstAttribute="leading" secondItem="0Ig-fb-CZW" secondAttribute="leading" id="GIT-4Y-f45"/>
+                                    <constraint firstAttribute="bottom" secondItem="hcf-tL-CZj" secondAttribute="bottom" id="O4T-Gi-pMa"/>
+                                    <constraint firstAttribute="trailing" secondItem="hcf-tL-CZj" secondAttribute="trailing" id="RdO-hM-oQi"/>
+                                    <constraint firstAttribute="width" secondItem="0Ig-fb-CZW" secondAttribute="height" multiplier="1:1" constant="16" id="db0-Vw-H8o"/>
+                                    <constraint firstItem="hcf-tL-CZj" firstAttribute="top" secondItem="0Ig-fb-CZW" secondAttribute="top" id="vb1-yp-LlL"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PdY-1r-ZKa">
+                                <rect key="frame" x="154.5" y="533" width="65" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.68627450980000004" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="6ya-Xv-C9r"/>
+                                    <constraint firstAttribute="height" constant="40" id="l35-J8-cNj"/>
+                                </constraints>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="pressNextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cbq-KM-vTW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Ig-fb-CZW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3DJ-Sg-O6z"/>
+                            <constraint firstItem="PdY-1r-ZKa" firstAttribute="top" secondItem="0Ig-fb-CZW" secondAttribute="bottom" constant="20" id="Hdn-y9-Pri"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Ig-fb-CZW" secondAttribute="trailing" constant="-16" id="Jek-za-2Ku"/>
+                            <constraint firstItem="PdY-1r-ZKa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kgw-3l-k0z"/>
+                            <constraint firstItem="0Ig-fb-CZW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="v6c-Zt-u14"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageHeight" destination="tum-HG-uBL" id="uQT-Ky-znj"/>
+                        <outlet property="imageLeft" destination="GIT-4Y-f45" id="VI3-7Q-Kt9"/>
+                        <outlet property="imageTop" destination="vb1-yp-LlL" id="ZIr-If-EWq"/>
+                        <outlet property="imageView" destination="hcf-tL-CZj" id="hoe-pe-yz5"/>
+                        <outlet property="imageWidth" destination="e4c-mU-p8e" id="CGh-iz-0GG"/>
+                        <outlet property="scrollView" destination="0Ig-fb-CZW" id="WUH-1R-RwE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
